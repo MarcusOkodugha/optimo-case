@@ -1,5 +1,6 @@
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import { Container, Box, Button } from "@mui/material";
 import SalesPage from "./pages/Sales";
 import PurchaseOrders from "./pages/PurchaseOrders";
@@ -40,6 +41,7 @@ export default function App() {
 
       <Container maxWidth="lg" sx={{ mt: 4 }}>
         <Routes>
+        <Route path="/" element={<Navigate to="/sales" replace />} />
           <Route path="/sales" element={<SalesPage />} />
           <Route path="/purchase-orders" element={<PurchaseOrders />} />
         </Routes>
