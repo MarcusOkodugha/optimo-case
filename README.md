@@ -1,6 +1,12 @@
-# Scaffolding for coding interview
+# Build containers and database and start backend
+cd backend
 
-The repository contains a starting point for the coding excercise given to you by mail. It contains:
+docker compose down -v
+docker compose build --no-cache
+docker compose up -d
 
-- A backend repository running a golang application (with postgres and air for hot reloading) in `/backend`
-- A frontend repository running React with Typescript (with Vite as the development server) in `/frontend`
+# Start frontend
+cd frontend 
+npm install
+npm run dev
+
